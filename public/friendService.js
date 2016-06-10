@@ -11,7 +11,10 @@ angular.module('userProfiles')
     },
 
     getFriends: function() {
-    	/* FIX ME */
+    	return $http({
+        method: 'GET',
+        url: '/api/profiles'
+      });
     }
-  }
+  };
 });

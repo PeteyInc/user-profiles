@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static('./public'));
 app.use(cors(corsOptions));
 app.use(session({ secret: 'config.sessionSecret' }));
+app.use(express.static(__dirname + './public'));
 
 app.post('/api/login', userCtrl.login);
 app.get('/api/profiles', profileCtrl.getFriends);
